@@ -75,7 +75,7 @@ public class Main {
                     if (userInput.equalsIgnoreCase(studentList[i].name)){
                         System.out.println("Student name: " + studentList[i].name + ".");
                         System.out.println("Grade: " + studentList[i].grade + "%.");
-                        System.out.println("Class rank: " + );
+                        System.out.println("Class rank: " + );//
                     }
                 }
             }

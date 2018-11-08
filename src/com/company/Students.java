@@ -22,7 +22,7 @@ public class Students {
 
         double[] classGrades = new double[numStudents];
         for (int i = 0; i < numStudents; i++){
-            classGrades[i] = grade;
+            classGrades[i] = grade;//
         }
 
     }
