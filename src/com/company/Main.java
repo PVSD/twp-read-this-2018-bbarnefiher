@@ -13,14 +13,15 @@ public class Main {
             maxIndx++;
             docLine[maxIndx] = textFile.nextLine();
         }
-        System.out.println(maxIndx);
+
         Students[] studentList = new Students[maxIndx];
         for (int i = 1; i < studentList.length; i++){
             studentList[i] = new Students(docLine[i]);
         }
         textFile.close();
 
-        System.out.println(studentList[1]);
+        System.out.println(studentList[1].grade);
+        System.out.println(studentList[1].gradeString);
 
     }
 }

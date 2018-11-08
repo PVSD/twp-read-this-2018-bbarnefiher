@@ -4,13 +4,21 @@ public class Students {
 
     String name;
     int absentDays;
-    String grade;
+    double grade;
+    String gradeString;
 
     public Students (String a){
 
-        String[] split = a.split("\\s");
-        this.absentDays = Integer.parseInt(split[split.length - 1]);
-        this.grade = (split[split.length-2]);
+        String[] info = a.split("\\s");
+        this.absentDays = Integer.parseInt(info[info.length - 1]);
+
+        if (info[info.length-2].substring(0,2).contains("%")){
+            this.grade = Double.parseDouble(info[info.length-2].substring(0,1));
+        }
+        else{
+            this.grade = Double.parseDouble(info[info.length-2].substring(0,2));
+        }
+       // this.gradeString = info[info.length-2].substring(0,2);
 
     }
 }
