@@ -70,7 +70,7 @@ public class Main {
             }
             else{
                 for (int i = 1; i < studentList.length; i++){
-
+//
                     String nameCheck = (studentList[i].name).trim();
                     userInput = userInput.trim();
 
