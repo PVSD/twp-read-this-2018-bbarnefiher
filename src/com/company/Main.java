@@ -59,23 +59,29 @@ public class Main {
 
 
 
-
-
-
         while(true){
             System.out.println("Please enter the name of the student you want to view information on. Type 'exit' to exit the program.");
             Scanner stringReader = new Scanner(System.in);
             String userInput = stringReader.nextLine();
 
             if (userInput.equalsIgnoreCase("exit")){
+                System.out.println("Goodbye");
                 System.exit(0);
             }
             else{
-                for (int i = 0; i < 25; i++){
-                    if (userInput.equalsIgnoreCase(studentList[i].name)){
+                for (int i = 1; i < studentList.length; i++){
+
+                    String nameCheck = (studentList[i].name).trim();
+                    userInput = userInput.trim();
+
+                    if (userInput.equals(nameCheck)){
                         System.out.println("Student name: " + studentList[i].name + ".");
-                        System.out.println("Grade: " + studentList[i].grade + "%.");
-                        System.out.println("Class rank: " + );//
+                        System.out.println("Grade: " + studentList[i].grade + "%");
+                        System.out.println("Days absent: " + studentList[i].absentDays);
+                        if (studentList[i].absentDays > 5 && studentList[i].grade < 70){
+                            System.out.println("This student should probably start showing up to class more if they want to improve their grade.");
+                        }
+                        break;
                     }
                 }
             }
